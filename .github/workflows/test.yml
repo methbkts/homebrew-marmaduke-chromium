@@ -9,7 +9,7 @@ jobs:
       - name: Install Homebrew
         run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
       - name: Tap Repo
-        run: brew tap mtslzr/marmaduke-chromium
+        run: brew tap methbkts/marmaduke-chromium
       - name: Update Brew
         run: brew update
       - name: Install Cask
@@ -22,3 +22,5 @@ jobs:
         run: brew uninstall --cask marmaduke-chromium-nosync
       - name: Install Cask (ungoogled)
         run: brew install --cask marmaduke-chromium-ungoogled
+      - name: Uninstall Cask (ungoogled)
+        run: brew uninstall --cask marmaduke-chromium-ungoogled
